@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+</head>
+
+<body>
+
+    <p><a href="urls.html?name=alan&hobby=css">Alan</a></p>
+    <p> <a href= "urls.html?name=Julio&hobby=html">Julio</a></p>
+    <p> <a href ="urls.html?name=Jonas&hobby=JS">Jonas</a></p>
+
+    <script>
+    let urlParams = new URLSearchParams(window.location.search);
+    let userName = urlParams.get("name");
+    let hobby = urlParams.get ("hobby");
+        console.log(userName + "has a hobby, its " + hobby)
+    </script>
+
+</body>
+</html>
