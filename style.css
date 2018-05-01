@@ -1,3 +1,4 @@
+
 .concert {
     border: 1px solid #000;
     padding: 1em;
@@ -5,16 +6,43 @@
     color:#151eb5;
 }
 
-h1{
-    font-family: 'stentiga',sans-serif;
-    color:#151eb5;
+.concert_page{
+    margin:0;
 }
 
-.img{
-
+h1,h2,h3{
+    font-family: 'stentiga',sans-serif;
+    color:#151eb5;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 concertList{
     display:grid;
+    grid-template-columns: 2fr 3fr 2fr;
+}
 
+img{
+    width:100%;
+
+}
+p{
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color:#151eb5;
+    margin-bottom:0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.red{
+    background-color:#ff000d;
+    margin:0;
+}
+
+.triangle{
+    position:absolute;
+    width:75px;
+    top: 550px;
+    right: 1px;
 }

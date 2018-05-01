@@ -17,7 +17,10 @@ function showSingleConcert(aConcert){
 
     clone.querySelector("h1").textContent = aConcert.title.rendered;
     clone.querySelector(".descript").innerHTML = aConcert.content.rendered;
-    clone.querySelector("h2").textContent =aConcert.acf.price
+    clone.querySelector(".ticket").textContent =aConcert.acf.ticket_price;
+    clone.querySelector(".venue").textContent =aConcert.acf.venue;
+    clone.querySelector(".time").textContent =aConcert.acf.time;
+    clone.querySelector(".date").textContent =aConcert.acf.date;
 
 
      if(aConcert._embedded["wp:featuredmedia"]){//img is there
