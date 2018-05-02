@@ -9,12 +9,50 @@
 </head>
 
 <body>
-    <h1>Find Us! </h1>
-    <img src="img/logos-website.png">
 
+
+    <!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <img src="img/Huset_logo_8_W.png" class="navImg">
+    <a href="concerts.html">Concerts</a>
+    <a href="cafe.html">Cafe</a>
+    <a href="contact.html">Find Us</a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()"> <div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div></span>
+
+
+
+    <h1>Find Us! </h1>
+
+    <div class="address">
     <h3>Address</h3>
     <p>Rådhusstræde 13 1466 Copenhagen K</p>
+    </div>
+
+    <img src="img/red_sign.jpg" class="contactImg">
+
+    <div class="phone">
     <h3>Phone</h3>
     <p> 21 51 21 51</p>
+    </div>
+
+    <img src="img/events_huset.jpeg" class="contactImg">
+
+    <script src="test.js"></script>
+
 </body>
 </html>
