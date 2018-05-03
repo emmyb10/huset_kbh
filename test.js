@@ -5,6 +5,7 @@ function fetchJazzConcerts(){
     .then (showconcert)
 }
 
+
 function showconcert (data){
     console.log(data);
     data.forEach(showSingleConcert)
@@ -37,6 +38,19 @@ function showSingleConcert(aConcert){
 
 }
 
+//found this stuff online
+
+function bottomVisible() {
+  const scrollY = window.scrollY
+  const visible = document.documentElement.clientHeight
+  const pageHeight = document.documentElement.scrollHeight
+  const bottomOfPage = visible + scrollY >= pageHeight
+  return bottomOfPage || pageHeight < visible
+}
+
+
+fetchJazzConcerts();
+
 function myFunction(x) {
     x.classList.toggle("change");
 }
@@ -52,15 +66,40 @@ function closeNav() {
 }
 
 
-//found this stuff online
 
-function bottomVisible() {
-  const scrollY = window.scrollY
-  const visible = document.documentElement.clientHeight
-  const pageHeight = document.documentElement.scrollHeight
-  const bottomOfPage = visible + scrollY >= pageHeight
-  return bottomOfPage || pageHeight < visible
+function fetchFood(){
+    fetch("http://mintwood.dk/huset/WP/wp-json/wp/v2/food")
+    .then(e => e.json ())
+    .then (showFood)
 }
 
 
-fetchJazzConcerts()
+function showFood(data){
+    console.log(data)
+    data.forEach(showSingleFood)
+}
+
+function showSingleFood(aFood){
+    console.log(aFood);
+    let template = document.querySelector("#foodTemp").content;
+    let clone = template.cloneNode(true);
+
+    clone.querySelector("h1").textContent = aFood.title.rendered;
+    clone.querySelector(".price").textContent =aFood.acf.price;
+
+
+
+    let foodlist = document.querySelector("#foodlist");
+    foodlist.appendChild(clone);
+
+
+
+}
+fetchFood();
+
+let clone = template.cloneNode(true);
+            let day= aEvent.acf.date.substring(0,2);
+            let month = aEvent.acf.date.substring(2,4);
+            let year = aEvent.acf.date.substring(4,8);
+            clone.querySelector(".date").textContent=day+"."+month+"."+year;
+
